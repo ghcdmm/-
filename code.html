@@ -29,7 +29,7 @@
       	}
       	</textarea>
 </p>
-<p>语言：
+<p id="control">语言：
 	<select name="class" id="class">
 		<option value="c">C/C++</option>
 		<option value="c-sharp">C#</option>
@@ -50,7 +50,9 @@
 		function mfun()
 		{
 			document.getElementById("lgg").className=document.getElementById("class").value;
-			dp.SyntaxHighlighter.HighlightAll('code');
+			document.getElementById("control").style.display='none';
+			dp.SyntaxHighlighter.HighlightAll('code',null,false);
+			
 		}
 	</script>
 	</body>
